@@ -50,8 +50,11 @@
       })
       
       $(".tombol-hapus").click(async function(){
-        await hapusBuah($(this).attr('data'))
+        if (confirm("Apakah benar mau di hapus?")){
+          await hapusBuah($(this).attr('data'))
         location.reload()
+        }
+        
       })
       
     })
